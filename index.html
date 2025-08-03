@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Construtora RXE - Construindo Sonhos</title>
+  <meta name="description"
+    content="Construtora RXE - Empreendimentos de qualidade em São Paulo. Apartamentos de 2 e 3 quartos com lazer completo.">
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <base href="/" />  <!-- Para GitHub Pages -->
+  <base href="./" /> <!-- Para local -->
+</head>
+
+<body class="bg-white text-gray-800 font-inter">
+
+  <!-- Loading Screen 
+  <div id="loading-screen" class="fixed inset-0 bg-blue-900 z-50 flex items-center justify-center">
+    <div class="text-center">
+      <div class="animate-spin rounded-full h-16 w-16 border-4 border-yellow-500 border-t-transparent mx-auto mb-4">
+      </div>
+      <p class="text-white text-lg font-medium">Carregando...</p>
+    </div>
+  </div>
+  </div>-->
+
+  <!-- Header -->
+  <header
+    class="bg-white/95 backdrop-blur-md border-b border-gray-200 py-4 shadow-lg sticky top-0 z-40 transition-all duration-300">
+    <div class="container mx-auto px-4 max-w-7xl flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="hover:opacity-90 transition-opacity duration-200 flex items-center">
+        <img src="/images/logo/logoAzulTransparenteone.png" alt="Logo Construtora RXE" class="h-16 md:h-20 w-auto">
+      </a>
+
+      <!-- Botão Mobile -->
+      <button id="mobile-menu-button"
+        class="lg:hidden text-gray-700 focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-colors">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+
+      <!-- Menu Desktop -->
+      <nav id="desktop-menu" class="hidden lg:flex items-center space-x-8 text-base font-medium">
+        <a href="#quem-somos"
+          class="nav-link text-gray-700 hover:text-yellow-600 transition-all duration-200 relative">Quem Somos</a>
+
+        <!-- Dropdown Empreendimentos -->
+        <div class="relative dropdown group">
+          <button class="nav-link flex items-center text-gray-700 hover:text-yellow-600 transition-all duration-200">
+            Empreendimentos <i class="fas fa-chevron-down ml-2 text-sm transition-transform group-hover:rotate-180"></i>
+          </button>
+          <div class="absolute dropdown-menu bg-white shadow-xl rounded-xl mt-2 py-3 w-64 z-50 border border-gray-100">
+            <a href="#empreendimentos"
+              class="block px-6 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors">
+              <i class="fas fa-building mr-3 text-yellow-600"></i>Todos os Lançamentos
+            </a>
+            <div class="border-t border-gray-100 my-2"></div>
+            <a href="projects/ResidencialDiPietro.html"
+              class="block px-6 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors">
+              <i class="fas fa-home mr-3 text-yellow-600"></i>Residencial Di Pietro
+            </a>
+          </div>
+        </div>
+
+        <a href="#beneficios"
+          class="nav-link text-gray-700 hover:text-yellow-600 transition-all duration-200 relative">Benefícios</a>
+        <a href="#contato"
+          class="nav-link text-gray-700 hover:text-yellow-600 transition-all duration-200 relative">Contato</a>
+
+        <!-- CTA Button -->
+        <a href="https://wa.me/5511966627334" target="_blank"
+          class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+          <i class="fab fa-whatsapp mr-2"></i>Fale Conosco
+        </a>
+      </nav>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden bg-white/95 backdrop-blur-md w-full py-6 px-4 shadow-xl border-t border-gray-100">
+      <div class="space-y-4">
+        <a href="#quem-somos" class="block py-3 text-gray-700 hover:text-yellow-600 transition-colors font-medium">Quem
+          Somos</a>
+
+        <!-- Dropdown Mobile -->
+        <div class="relative">
+          <button id="mobile-submenu-button"
+            class="w-full flex justify-between items-center py-3 text-gray-700 hover:text-yellow-600 transition-colors font-medium">
+            Empreendimentos <i class="fas fa-chevron-down text-sm transition-transform"></i>
+          </button>
+          <div id="mobile-submenu" class="hidden pl-4 space-y-2 mt-2 bg-gray-50 rounded-lg p-3">
+            <a href="#empreendimentos" class="block py-2 text-gray-600 hover:text-yellow-600 transition-colors">
+              <i class="fas fa-building mr-2 text-yellow-600"></i>Todos os Lançamentos
+            </a>
+            <a href="projects/ResidencialDiPietro.html"
+              class="block py-2 text-gray-600 hover:text-yellow-600 transition-colors">
+              <i class="fas fa-home mr-2 text-yellow-600"></i>Residencial Di Pietro
+            </a>
+          </div>
+        </div>
+
+        <a href="#beneficios"
+          class="block py-3 text-gray-700 hover:text-yellow-600 transition-colors font-medium">Benefícios</a>
+        <a href="#contato"
+          class="block py-3 text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contato</a>
+
+        <!-- Mobile CTA -->
+        <a href="https://wa.me/5511966627334" target="_blank"
+          class="block bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-4 rounded-xl font-semibold transition-all duration-200 text-center mt-4">
+          <i class="fab fa-whatsapp mr-2"></i>Fale Conosco
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section - COM BACKGROUND DE IMAGEM -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+          <div class="hero-badge">
+            <i class="fas fa-star mr-2"></i>
+            LANÇAMENTO EXCLUSIVO
+          </div>
+
+          <h1 class="hero-title">
+            Residencial<br>
+            <span style="color: #FBBF24;">Di Pietro</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Conforto, qualidade e sofisticação em um só lugar. Apartamentos de 2 e 3 quartos com lazer completo.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#empreendimentos" class="hero-btn hero-btn-primary">
+              <i class="fas fa-eye"></i>
+              Ver Empreendimento
+            </a>
+            <a href="https://wa.me/5511966627334" target="_blank" class="hero-btn hero-btn-secondary">
+              <i class="fab fa-whatsapp"></i>
+              Agendar Visita
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-down">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </div>
+  </section>
+
+  <!-- Floating Buttons -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5511966627334" target="_blank"
+      class="floating-btn bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110"
+      title="WhatsApp">
+      <i class="fab fa-whatsapp text-xl"></i>
+    </a>
+
+    <!-- Simulação -->
+    <a href="https://www8.caixa.gov.br/siopiinternet-web/simulaOperacaoInternet.do?method=inicializarCasoUso"
+      target="_blank"
+      class="floating-btn bg-yellow-600 hover:bg-yellow-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110"
+      title="Simulação Financiamento">
+      <i class="fas fa-calculator text-xl"></i>
+    </a>
+  </div>
+
+  <!-- Quem Somos - TEXTO ORIGINAL -->
+  <section id="quem-somos" class="bg-blue-900 text-gray-300 py-20 lg:py-32 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-32 h-32 border border-yellow-500 rounded-full"></div>
+      <div class="absolute bottom-20 right-20 w-24 h-24 border border-yellow-500 rounded-full"></div>
+      <div class="absolute top-1/2 left-1/4 w-16 h-16 border border-yellow-500 rounded-full"></div>
+    </div>
+
+    <div class="container mx-auto px-4 max-w-7xl relative z-10">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="text-center mb-12">
+          <div
+            class="inline-flex items-center bg-yellow-600/20 text-yellow-400 px-4 py-2 rounded-full font-semibold mb-6">
+            <i class="fas fa-info-circle mr-2"></i>
+            NOSSA HISTÓRIA
+          </div>
+
+          <h2 class="text-3xl lg:text-5xl font-bold mb-8 text-white leading-tight">
+            Quem <span class="text-yellow-400">Somos</span>
+          </h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed">
+          <p class="text-gray-100">
+            Desde agosto de 2013, a <strong class="text-yellow-400">RXE</strong> atua com dedicação no ramo da
+            construção civil, com uma trajetória sólida de construções que unem qualidade, funcionalidade e respeito ao
+            cliente.
+          </p>
+
+          <p class="text-gray-100">
+            Agora, damos um novo passo — com o mesmo compromisso de sempre — para realizar o sonho da casa própria de
+            mais famílias brasileiras.
+          </p>
+
+          <p class="text-gray-100">
+            Nosso objetivo vai além de construir imóveis. Queremos construir oportunidades, histórias e futuros. A RXE
+            acredita que todo mundo merece viver com dignidade, em um espaço bem planejado, funcional e que caiba no
+            bolso.
+          </p>
+
+          <p class="text-gray-100">
+            Se você procura uma empresa séria, transparente e com o olhar voltado para as pessoas, a RXE é para você.
+            Porque para a gente, construir é mais do que levantar paredes. É criar espaços onde a vida acontece.
+          </p>
+
+          <p class="text-gray-100">
+            Nos especializamos em empreendimentos de alto padrão, tanto para quem busca o imóvel perfeito para viver
+            quanto para investidores que desejam alavancar seus negócios com segurança e rentabilidade.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section id="beneficios" class="bg-gray-50 py-20 lg:py-32">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="inline-flex items-center bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold mb-6">
+          <i class="fas fa-star mr-2"></i>
+          NOSSOS DIFERENCIAIS
+        </div>
+        <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-blue-900">
+          Por que escolher a <span class="text-yellow-600">RXE</span>?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Oferecemos muito mais que um imóvel. Proporcionamos uma experiência completa de qualidade e confiança.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Benefício 1 -->
+        <div
+          class="benefit-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-shield-alt text-2xl text-yellow-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-4">Qualidade Garantida</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Mais de 12 anos de experiência em construção civil, com materiais de primeira qualidade e acabamentos
+            impecáveis.
+          </p>
+        </div>
+
+        <!-- Benefício 2 -->
+        <div
+          class="benefit-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-map-marker-alt text-2xl text-yellow-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-4">Localização Privilegiada</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Empreendimentos estrategicamente localizados com fácil acesso a transporte, comércio e serviços essenciais.
+          </p>
+        </div>
+
+        <!-- Benefício 3 -->
+        <div
+          class="benefit-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-dollar-sign text-2xl text-yellow-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-4">Preço Justo</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Condições especiais de pagamento e financiamento facilitado para realizar o sonho da casa própria.
+          </p>
+        </div>
+
+        <!-- Benefício 4 -->
+        <div
+          class="benefit-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          data-aos="fade-up" data-aos-delay="400">
+          <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-swimming-pool text-2xl text-yellow-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-4">Lazer Completo</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Áreas de lazer planejadas para toda a família, com piscina, playground, salão de festas e muito mais.
+          </p>
+        </div>
+
+        <!-- Benefício 5 -->
+        <div
+          class="benefit-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          data-aos="fade-up" data-aos-delay="500">
+          <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-headset text-2xl text-yellow-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-4">Atendimento Personalizado</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Equipe especializada para te acompanhar em todas as etapas, desde a escolha até a entrega das chaves.
+          </p>
+        </div>
+
+        <!-- Benefício 6 -->
+        <div
+          class="benefit-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          data-aos="fade-up" data-aos-delay="600">
+          <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-leaf text-2xl text-yellow-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-blue-900 mb-4">Sustentabilidade</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Projetos com consciência ambiental, utilizando tecnologias sustentáveis e eficiência energética.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empreendimentos -->
+  <section id="empreendimentos" class="bg-white py-20 lg:py-32">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold mb-6">
+          <i class="fas fa-building mr-2"></i>
+          NOSSOS PROJETOS
+        </div>
+        <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-blue-900">
+          Novos <span class="text-yellow-600">Empreendimentos</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Descubra nossos lançamentos exclusivos, projetados para oferecer o máximo em conforto e qualidade de vida.
+        </p>
+      </div>
+
+      <div class="swiper-container empreendimentos-slider mb-16">
+        <div class="swiper-wrapper">
+          <!-- Empreendimento 1 -->
+          <div class="swiper-slide">
+            <div
+              class="empreendimento-card bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              data-aos="fade-up">
+              <div class="relative h-64 md:h-80 bg-gray-100 rounded-t-2xl overflow-hidden">
+                <img src="images/Galeria/Land.jpg" alt="Residencial Di Pietro"
+                  class="absolute inset-0 w-full h-full object-cover"
+                  onerror="this.parentElement.classList.add('bg-gradient-to-r','from-blue-900','to-blue-700')">
+                <div class="absolute top-4 left-4">
+                  <span class="bg-yellow-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                    <i class="fas fa-star mr-1"></i>LANÇAMENTO
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-8">
+                <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-blue-900">Residencial Di Pietro</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  Apartamentos de 2 e 3 quartos com 1 vaga de garagem e lazer completo. Localização privilegiada no
+                  Jardim Dom José.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                  <div class="text-center p-4 bg-gray-50 rounded-xl">
+                    <i class="fas fa-bed text-yellow-600 text-xl mb-2"></i>
+                    <div class="font-semibold text-blue-900">2-3 Quartos</div>
+                  </div>
+                  <div class="text-center p-4 bg-gray-50 rounded-xl">
+                    <i class="fas fa-car text-yellow-600 text-xl mb-2"></i>
+                    <div class="font-semibold text-blue-900">1 Vaga</div>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <a href="projects/ResidencialDiPietro.html"
+                    class="flex-1 bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 text-center">
+                    Ver Detalhes
+                  </a>
+                  <a href="https://wa.me/5511966627334" target="_blank"
+                    class="flex-1 bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 text-center">
+                    <i class="fab fa-whatsapp mr-2"></i>Contato
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empreendimento 2 - Coming Soon -->
+          <div class="swiper-slide">
+            <div
+              class="coming-soon-card bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-3xl p-12 text-center h-full flex flex-col justify-center"
+              data-aos="fade-up" data-aos-delay="200">
+              <div class="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-home text-3xl text-yellow-600"></i>
+              </div>
+              <h3 class="text-2xl lg:text-3xl font-bold text-blue-900 mb-4">Novos Lançamentos</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Estamos preparando empreendimentos incríveis para você. Cadastre-se para ser o primeiro a saber!
+              </p>
+              <div class="inline-flex items-center bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold">
+                <i class="fas fa-clock mr-2"></i>EM BREVE
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botões de navegação -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Localização -->
+      <div class="bg-gradient-to-r from-blue-900 to-blue-800 rounded-3xl p-8 lg:p-12 text-white" data-aos="fade-up">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl lg:text-3xl font-bold mb-6">
+              <i class="fas fa-map-marker-alt text-yellow-400 mr-3"></i>
+              Localização Privilegiada
+            </h3>
+            <p class="text-gray-200 mb-6 leading-relaxed">
+              Nossos empreendimentos estão estrategicamente localizados em regiões de fácil acesso, próximos a
+              transporte público, comércio, escolas e serviços essenciais.
+            </p>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                <span>Próximo ao transporte público</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                <span>Comércio e serviços na região</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                <span>Escolas e hospitais próximos</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
+            <iframe class="w-full h-80 rounded-xl"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.805086981464!2d-46.7921268!3d-23.6829274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce52fc10dd6f03%3A0x779f0615f09b22f8!2sRua%20Nicolo%20Di%20Pietro%2C%20500%20-%20Jardim%20Dom%20Jos%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005886-150!5e0!3m2!1spt-BR!2sbr!4v1753130962528!5m2!1spt-BR!2sbr"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="bg-gray-50 py-20 lg:py-32">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold mb-6">
+          <i class="fas fa-phone mr-2"></i>
+          FALE CONOSCO
+        </div>
+        <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-blue-900">
+          Agende uma <span class="text-yellow-600">Visita</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Entre em contato conosco e tire todas as suas dúvidas. Nossa equipe está pronta para te atender!
+        </p>
+
+        <!-- CTA Principal -->
+        <a href="https://wa.me/5511966627334" target="_blank"
+          class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 mb-12">
+          <i class="fab fa-whatsapp text-2xl mr-3"></i>
+          Fale conosco no WhatsApp
+        </a>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Informações de Contato -->
+        <div data-aos="fade-right">
+          <h3 class="text-2xl font-bold text-blue-900 mb-8">Informações de Contato</h3>
+
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg">
+              <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-yellow-600 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-blue-900 mb-2">Endereço</h4>
+                <p class="text-gray-600">Rua Nicolo Di Pietro, 500<br>Jardim Dom José, São Paulo - SP</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg">
+              <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone-alt text-yellow-600 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-blue-900 mb-2">Telefone</h4>
+                <p class="text-gray-600">(11) 96662-7334</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg">
+              <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-yellow-600 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-blue-900 mb-2">E-mail</h4>
+                <p class="text-gray-600">contato@construtorarxe.com.br</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg">
+              <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-clock text-yellow-600 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-blue-900 mb-2">Horário de Atendimento</h4>
+                <p class="text-gray-600">Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 14h</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Redes Sociais MAIORES -->
+          <div class="mt-8">
+            <h4 class="font-semibold text-blue-900 mb-4">Siga-nos nas redes sociais</h4>
+            <div class="flex space-x-4">
+              <a href="https://wa.me/5511966627334" target="_blank"
+                class="social-btn bg-green-500 hover:bg-green-600 text-white transition-all duration-200">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://www.instagram.com/residencialdipietro?igsh=MXF0azdsOGN3dWtiNw%3D%3D&utm_source=qr"
+                target="_blank" class="social-btn bg-pink-500 hover:bg-pink-600 text-white transition-all duration-200">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://facebook.com/construtorarxe" target="_blank"
+                class="social-btn bg-blue-600 hover:bg-blue-700 text-white transition-all duration-200">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário -->
+        <div data-aos="fade-left">
+          <form action="https://formspree.io/f/mwpoeolv" method="POST" id="form-contato"
+            class="bg-white p-8 lg:p-10 rounded-3xl shadow-xl">
+            <h3 class="text-2xl font-bold text-blue-900 mb-8">Envie sua mensagem</h3>
+
+            <div class="space-y-6">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2" for="nome">Nome Completo</label>
+                <input type="text" name="nome" id="nome" required placeholder="Seu nome completo"
+                  class="w-full border-2 border-gray-200 rounded-xl p-4 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200">
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2" for="email">E-mail</label>
+                <input type="email" name="email" id="email" required placeholder="seu@email.com"
+                  class="w-full border-2 border-gray-200 rounded-xl p-4 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200">
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2" for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" required placeholder="(11) 96666-7777"
+                  class="w-full border-2 border-gray-200 rounded-xl p-4 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200">
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2" for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" rows="5" required placeholder="Como podemos te ajudar?"
+                  class="w-full border-2 border-gray-200 rounded-xl p-4 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200 resize-none"></textarea>
+              </div>
+
+              <button type="submit"
+                class="w-full bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Coluna 1: Logo e sobre -->
+        <div class="space-y-6">
+          <div class="flex items-center">
+            <img src="images/Logo/logoAzulTransparenteone.png" alt="Logo Construtora RXE"
+              class="h-12 w-auto mr-3 filter brightness-0 invert">
+          </div>
+          <p class="text-gray-400 leading-relaxed">
+            Construindo sonhos e transformando vidas através de empreendimentos de qualidade há mais de 12 anos.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://wa.me/5511966627334" target="_blank"
+              class="text-gray-400 hover:text-green-400 transition-colors transform hover:scale-110">
+              <i class="fab fa-whatsapp text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/residencialdipietro?igsh=MXF0azdsOGN3dWtiNw%3D%3D&utm_source=qr"
+              target="_blank" class="text-gray-400 hover:text-pink-400 transition-colors transform hover:scale-110">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="https://facebook.com/construtorarxe" target="_blank"
+              class="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Links rápidos -->
+        <div class="space-y-6">
+          <h3 class="text-white font-bold text-lg">Links Rápidos</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-yellow-500 transition-colors flex items-center"><i
+                  class="fas fa-chevron-right mr-2 text-xs"></i>Home</a></li>
+            <li><a href="#quem-somos" class="hover:text-yellow-500 transition-colors flex items-center"><i
+                  class="fas fa-chevron-right mr-2 text-xs"></i>Quem Somos</a></li>
+            <li><a href="#empreendimentos" class="hover:text-yellow-500 transition-colors flex items-center"><i
+                  class="fas fa-chevron-right mr-2 text-xs"></i>Empreendimentos</a></li>
+            <li><a href="#beneficios" class="hover:text-yellow-500 transition-colors flex items-center"><i
+                  class="fas fa-chevron-right mr-2 text-xs"></i>Benefícios</a></li>
+            <li><a href="#contato" class="hover:text-yellow-500 transition-colors flex items-center"><i
+                  class="fas fa-chevron-right mr-2 text-xs"></i>Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Contatos -->
+        <div class="space-y-6">
+          <h3 class="text-white font-bold text-lg">Contato</h3>
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-map-marker-alt mt-1 text-yellow-500"></i>
+              <span class="text-sm">Rua Nicolo Di Pietro, 500<br>Jardim Dom José, São Paulo - SP</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-phone-alt text-yellow-500"></i>
+              <span class="text-sm">(11) 96662-7334</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-envelope text-yellow-500"></i>
+              <span class="text-sm">contato@construtorarxe.com.br</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-clock text-yellow-500"></i>
+              <span class="text-sm">Seg-Sex: 9h às 18h</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna 4: Newsletter -->
+        <div class="space-y-6">
+          <h3 class="text-white font-bold text-lg">Newsletter</h3>
+          <p class="text-gray-400 text-sm">
+            Cadastre-se para receber novidades e lançamentos exclusivos.
+          </p>
+          <form class="space-y-3" id="newsletter-form">
+            <input type="email" placeholder="Seu e-mail" required
+              class="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-white placeholder-gray-400">
+            <button type="submit"
+              class="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 w-full transform hover:-translate-y-0.5">
+              <i class="fas fa-envelope mr-2"></i>Assinar
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Divisor -->
+      <div class="border-t border-gray-800 my-8"></div>
+
+      <!-- Rodapé inferior -->
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="text-center md:text-left">
+          <p class="text-gray-400">© 2025 Construtora RXE. Todos os direitos reservados.</p>
+        </div>
+        <div class="flex flex-wrap justify-center md:justify-end space-x-6 text-sm">
+          <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Política de Privacidade</a>
+          <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">Termos de Uso</a>
+          <span class="text-gray-400">CNPJ: 00.000.000/0001-00</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
