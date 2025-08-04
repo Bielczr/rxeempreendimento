@@ -104,7 +104,7 @@
       position: relative;
       min-height: 100vh;
       overflow: hidden;
-      background-image: url('/images/galeria/Land.jpg'); /* Placeholder - você pode alterar no VS Code */
+      background-image: url('images/galeria/Land.jpg'); /* Placeholder - você pode alterar no VS Code */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
