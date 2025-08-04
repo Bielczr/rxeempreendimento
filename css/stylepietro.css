@@ -104,7 +104,7 @@
       position: relative;
       min-height: 100vh;
       overflow: hidden;
-      background-image: url('/images/galeria/Sacada.jpg'); /* Placeholder - você pode alterar no VS Code */
+      background-image: url('/images/galeria/Land.jpg'); /* Placeholder - você pode alterar no VS Code */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -123,7 +123,7 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(45, 46, 48, 0.801) 0%, rgba(162, 166, 177, 0.692) 50%, rgba(12, 23, 48, 0.527) 100%);
+      background: linear-gradient(135deg, rgba(45, 46, 48, 0.356) 0%, rgba(162, 166, 177, 0.199) 50%, rgba(12, 23, 48, 0.356) 100%);
       z-index: 1;
     }
 
