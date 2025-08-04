@@ -74,6 +74,32 @@ const Utils = {
   }
 };
 
+// Loading Screen 
+class LoadingScreen {
+  constructor() {
+    this.element = document.getElementById('loading-screen');
+    this.init();
+  } 
+
+  init() {
+    // Hide loading screen after page load
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        this.hide();
+      }, CONFIG.loadingDuration);
+    });
+  }
+
+  hide() {
+    if (this.element) {
+      this.element.classList.add('hidden');
+      setTimeout(() => {
+        this.element.style.display = 'none';
+      }, 500);
+    }
+  }
+}
+
 
 // Header Controller
 class HeaderController {
