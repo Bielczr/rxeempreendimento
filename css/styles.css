@@ -109,7 +109,7 @@
       min-height: 100vh;
       overflow: hidden;
       /* Preparado para receber imagem de fundo via CSS externo */
-      background-image: url('/images/galeria/Sacada.jpg'); /* Placeholder - você pode alterar no VS Code */
+      background-image: url('images/galeria/Sacada.jpg'); /* Placeholder - você pode alterar no VS Code */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
